@@ -1,0 +1,18 @@
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="30dp"
+    android:height="20dp"
+    android:viewportWidth="30"
+    android:viewportHeight="20">
+  <path
+      android:pathData="M19.211,4.056C18.557,3.316 17.374,3 15.86,3h-4.394a0.628,0.628 0,0 0,-0.622 0.525l-1.83,11.49a0.375,0.375 0,0 0,0.373 0.431h2.712l0.682,-4.279 -0.021,0.135a0.626,0.626 0,0 1,0.62 -0.525h1.288c2.533,0 4.515,-1.018 5.095,-3.965 0.017,-0.087 0.045,-0.255 0.045,-0.255 0.164,-1.09 -0.001,-1.83 -0.597,-2.5z"
+      android:fillColor="#46545E"
+      android:fillType="nonZero"/>
+  <path
+      android:pathData="M20.494,7.115c-0.63,2.9 -2.638,4.435 -5.826,4.435h-1.155L12.65,17h1.874c0.271,0 0.502,-0.195 0.544,-0.46l0.022,-0.116 0.431,-2.704 0.028,-0.15a0.548,0.548 0,0 1,0.543 -0.46h0.343c2.215,0 3.95,-0.89 4.456,-3.467 0.203,-1.034 0.105,-1.901 -0.397,-2.528z"
+      android:fillColor="#46545E"
+      android:fillType="nonZero"/>
+</vector>

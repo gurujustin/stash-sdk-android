@@ -1,0 +1,6 @@
+{
+  "status":"ERROR",
+  "errorcode":"9001",
+  "errormessage":"MockError",
+  "customermessage":"This is a mock error, because you exceeded the speed of light, and you were warned"
+}

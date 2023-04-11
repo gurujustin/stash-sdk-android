@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorButtonNormal">
+    <item android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="#000000" />
+            <size
+                android:width="32dp"
+                android:height="32dp" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/shape_circle_grey" />
+</ripple>

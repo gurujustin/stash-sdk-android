@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="darkBlack">#12202A</color>
+    <color name="coolGray">#A3AAAF</color>
+    <color name="aquaMarine">#07d0c7</color>
+    <color name="darkAquaMarine">#048b85</color>
+    <color name="lightGrey">#f5f5f5</color>
+    <color name="pureWhite">#ffffff</color>
+</resources>

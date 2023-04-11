@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/monthYearPickerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="300dp"
+    android:orientation="vertical">
+
+    <TextView
+        fontPath="fonts/Lato-Regular.ttf"
+        android:id="@+id/monthTitle"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:text="@string/month_year_picker_month_label"
+        app:layout_constraintStart_toStartOf="@id/monthNumberPicker"
+        app:layout_constraintBottom_toTopOf="@id/monthNumberPicker"
+        />
+
+    <NumberPicker
+        android:id="@+id/monthNumberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="false"
+        />
+
+    <TextView
+        fontPath="fonts/Lato-Regular.ttf"
+        android:id="@+id/yearTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/month_year_picker_year_label"
+        app:layout_constraintStart_toStartOf="@id/yearNumberPicker"
+        app:layout_constraintBottom_toTopOf="@id/yearNumberPicker"/>
+
+    <NumberPicker
+        android:id="@+id/yearNumberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="false"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_button_selector"
+        android:textColor="@android:color/white"
+        android:text="@string/month_year_picker_ok_button_label"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

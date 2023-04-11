@@ -1,0 +1,59 @@
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<resources>
+
+    // --- General ----
+
+    // Error
+    <string name="general_error">Error</string>
+    <string name="validation_error_empty">Required field.</string>
+    <string name="validation_error_invalid_characters">Invalid Entry.</string>
+    <string name="validation_error_missing_country">Please select country</string>
+
+    // --- Payment chooser screen ----
+    <string name="payment_chooser_title_text">Payment Method</string>
+    <string name="payment_chooser_subtitle_text">Choose a payment method</string>
+    <string name="payment_chooser_credit_card">Credit Card</string>
+    <string name="payment_chooser_sepa">SEPA</string>
+    <string name="payment_chooser_paypal">PayPal</string>
+
+    // ---- Sepa data enrty screen ----
+    <string name="sepa_data_entry_title">SEPA</string>
+    <string name="sepa_data_entry_save">Save</string>
+    <string name="sepa_data_entry_first_name">First Name</string>
+    <string name="sepa_data_entry_last_name">Last Name</string>
+    <string name="sepa_data_entry_iban">IBAN</string>
+    <string name="sepa_data_entry_country">Country</string>
+
+    // Errors
+    <string name="sepa_data_entry_invalid_iban">Please enter a correct iban number</string>
+
+    // ---- Credit card entry screen ----
+    <string name="credit_card_data_entry_title">Credit card</string>
+    <string name="credit_card_data_entry_first_name">@string/sepa_data_entry_first_name</string>
+    <string name="credit_card_data_entry_last_name">@string/sepa_data_entry_last_name</string>
+    <string name="credit_card_data_entry_country">@string/sepa_data_entry_country</string>
+    <string name="credit_card_data_number">Credit Card Number</string>
+    <string name="credit_card_data_expiry">Expiration Date</string>
+    <string name="credit_card_data_expiry_hint">MM/YY</string>
+    <string name="credit_card_data_cvv">CVV/CVC</string>
+
+    // Errors
+    <string name="credit_card_data_number_validation_error">Please enter a correct credit card number.</string>
+    <string name="credit_card_data_cvv_validation_error">Invalid CVC/CVV</string>
+    <string name="credit_card_data_expiry_validation_error">Invalid expiration date</string>
+
+    // --- Country chooser screen ----
+    <string name="country_chooser_title_text">Select Your Country</string>
+    <string name="country_chooser_search_text">Search Country</string>
+
+    // --- MonthYear Picker ---
+    <string name="month_year_picker_month_label">Month</string>
+    <string name="month_year_picker_year_label">Year</string>
+    <string name="month_year_picker_ok_button_label">OK</string>
+
+    // --- Idempotency ---
+    <string name="idempotency_message">Idempotency Key supplied, while the Integration\'s Payment Method doesn\'t support idempotency</string>
+</resources>

@@ -1,0 +1,14 @@
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="46dp"
+    android:height="50dp"
+    android:viewportWidth="46"
+    android:viewportHeight="50">
+  <path
+      android:pathData="M8,0L38,0A8,8 0,0 1,46 8L46,42A8,8 0,0 1,38 50L8,50A8,8 0,0 1,0 42L0,8A8,8 0,0 1,8 0z"
+      android:fillColor="#F6F7F7"
+      android:fillType="evenOdd"/>
+</vector>

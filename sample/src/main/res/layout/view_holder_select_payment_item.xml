@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.content.Context" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="paymentMethod"
+            type="com.mobilabsolutions.stash.sample.data.entities.PaymentMethod" />
+
+        <variable
+            name="isSelected"
+            type="Boolean" />
+
+        <variable
+            name="selectListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginBottom="8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{selectListener}"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/payment_type_icon"
+                android:layout_width="66dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/image_description"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:paymentImageByType="@{paymentMethod}"
+                tools:src="@drawable/sepa" />
+
+            <TextView
+                android:id="@+id/payment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{paymentMethod.type.displayName}"
+                android:textAppearance="@style/itemTitle"
+                app:layout_constraintBottom_toTopOf="@+id/payment_alias"
+                app:layout_constraintStart_toEndOf="@id/payment_type_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="@string/payment_type_placeholder" />
+
+            <TextView
+                android:id="@+id/payment_alias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{paymentMethod.alias}"
+                android:textAppearance="@style/itemDescription"
+                android:textIsSelectable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/payment_type_icon"
+                app:layout_constraintTop_toBottomOf="@+id/payment_name"
+                tools:text="@string/payment_type_alias_placeholder" />
+
+            <com.mobilabsolutions.stash.sample.util.CheckableImageView
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginEnd="5dp"
+                android:checked="@{isSelected}"
+                android:src="@drawable/payment_selection_icon_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

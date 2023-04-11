@@ -1,0 +1,46 @@
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<resources>
+    <string name="app_name">Stash Sample</string>
+    <string name="items">List of Items</string>
+    <string name="items_tab">Items</string>
+    <string name="checkout">Check-out</string>
+    <string name="register">Register</string>
+    <string name="payment">Payment</string>
+    <string name="info">Info</string>
+
+    <string name="message">%1$s added to the cart</string>
+    <string name="price_placeholder">0,00 €</string>
+    <string name="image_description">Image Description</string>
+    <string name="item_title">Item Title</string>
+    <string name="item_description">Item Description</string>
+    <string name="checkout_button_title">CHECK-OUT</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="select_payment_methods">Select Payment Methods</string>
+    <string name="add_payment_method">Add new payment method</string>
+    <string name="empty_checkout">No Items yet</string>
+    <string name="select_new_item">Please select a new item.</string>
+
+    <string name="delete_payment_method_title">Delete Payment Method</string>
+    <string name="delete_payment_method_message">Are you sure?</string>
+    <string name="payment_type_placeholder">Credit Card</string>
+    <string name="payment_type_alias_placeholder">maxmustermann@gmail.com</string>
+
+    <string name="pay_amount">Pay %1$s €</string>
+    <string name="payment_success">Payment completed Successfully</string>
+    <string name="dummy_version">v 0.0.2</string>
+    <string name="action_ok">OK</string>
+
+    <string name="app_version">APP Version: %1$s</string>
+    <string name="lib_version">SDK Version: %1$s</string>
+    <string name="backend_version">Backend Version: 1</string>
+
+    <string name="pref_psp_adyen">ADYEN</string>
+    <string name="pref_psp_braintree">BRAINTREE</string>
+    <string name="pref_psp_bspayone">BS_PAYONE</string>
+
+
+</resources>

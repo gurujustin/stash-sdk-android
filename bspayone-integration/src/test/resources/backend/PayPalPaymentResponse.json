@@ -1,0 +1,9 @@
+{
+  "result": {
+    "mappedTransactionId" : "123",
+    "redirectUrl" : "bla",
+    "amount" : "100",
+    "currency" : "EUR",
+    "reason" : "Mock reason"
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black_haze">#f6f7f7</color>
+    <color name="cool_gray">#a3aaaf</color>
+    <color name="cool_gray_pressed">#BEBEBE</color>
+    <color name="gable_green">#12202a</color>
+    <color name="tropical_blue">#CCE6F9</color>
+    <color name="lochmara">#0083e1</color>
+    <color name="havelock_blue">#5BA7DD</color>
+    <color name="coral">#ef4e4e</color>
+    <color name="grayish">#f3f3f3</color>
+    <color name="carnation">#f86a6a</color>
+    <color name="background">#f5f5f9</color>
+    <color name="dark_blue">#00107b</color>
+    <color name="deep_dark_blue">#334aab</color>
+
+</resources>

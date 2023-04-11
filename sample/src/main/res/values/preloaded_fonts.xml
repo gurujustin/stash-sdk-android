@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/lato</item>
+        <item>@font/lato_black</item>
+        <item>@font/lato_bold</item>
+    </array>
+</resources>

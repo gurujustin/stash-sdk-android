@@ -1,0 +1,24 @@
+{
+  "aliasId": "abcd1234",
+  "psp" : "bsPayone",
+  "extra": {
+    "ccExpiry": "01/21",
+    "ccMask": "VISA-1234",
+    "ccType": "VISA",
+    "email": "bla@test.test",
+    "ibanMask": "",
+    "paymentMethod" : "CC",
+    "pspExtra": {
+      "type": "bsPayone",
+      "merchantId": "123123",
+      "portalId": "10101",
+      "apiVersion": "1000.1",
+      "request": "verification",
+      "responseType": "JSON",
+      "encoding": "utf-8",
+      "mode" : "test",
+      "accountId" : "1234acid",
+      "hash": "hash"
+    }
+  }
+}

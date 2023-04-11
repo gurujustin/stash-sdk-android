@@ -1,0 +1,10 @@
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<resources>
+    <style name="MonthYearPickerStyle" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="windowFixedWidthMajor">90%</item>
+        <item name="windowFixedWidthMinor">90%</item>
+    </style>
+</resources>

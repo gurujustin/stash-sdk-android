@@ -1,0 +1,26 @@
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="29dp"
+    android:height="18dp"
+    android:viewportWidth="29"
+    android:viewportHeight="18">
+  <path
+      android:pathData="M10.714,2.133h7.766v13.908h-7.766z"
+      android:fillColor="#7673C0"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M11.21,9.085a8.819,8.819 0,0 1,3.39 -6.952,8.897 8.897,0 0,0 -12.005,0.953 8.822,8.822 0,0 0,0 12.001,8.897 8.897,0 0,0 12.005,0.954 8.819,8.819 0,0 1,-3.39 -6.956z"
+      android:fillColor="#EB001B"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M28.172,15.172v-0.787h0.155v-0.162h-0.392v0.162h0.155v0.787h0.082zM28.935,15.172v-0.95h-0.12l-0.138,0.678 -0.138,-0.677h-0.122v0.949h0.085v-0.712l0.129,0.617h0.09l0.128,-0.617v0.718l0.086,-0.006z"
+      android:fillColor="#00A1DF"
+      android:fillType="nonZero"/>
+  <path
+      android:pathData="M28.958,9.085a8.842,8.842 0,0 1,-4.997 7.955,8.9 8.9,0 0,1 -9.364,-1.002 8.833,8.833 0,0 0,3.391 -6.954,8.833 8.833,0 0,0 -3.39,-6.954 8.9,8.9 0,0 1,9.364 -1.002,8.842 8.842,0 0,1 4.996,7.957z"
+      android:fillColor="#00A1DF"
+      android:fillType="evenOdd"/>
+</vector>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.mobilabsolutions.stash.sample.data.entities.Product" />
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="81dp"
+                android:layout_height="88dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/image_card_05"
+                app:image="@{product.image}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/product_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:text="@{product.name, default=@string/item_title}"
+                android:textAppearance="@style/itemTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/product_image"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:paddingStart="8dp"
+                android:text="@{product.description, default=@string/item_description}"
+                android:textAppearance="@style/itemDescription"
+                app:layout_constraintStart_toEndOf="@+id/product_image"
+                app:layout_constraintTop_toBottomOf="@+id/product_title"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:text="@string/price_placeholder"
+                android:textAppearance="@style/itemPrice"
+                app:currency="@{product.price}"
+                android:paddingBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/product_image"
+                app:layout_constraintStart_toEndOf="@+id/product_image"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ripple_circle_grey"
+                android:contentDescription="@string/image_description"
+                android:onClick="@{clickListener}"
+                android:padding="8dp"
+                android:src="@drawable/ic_add"
+                android:tint="@color/aquaMarine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

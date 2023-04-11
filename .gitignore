@@ -1,0 +1,11 @@
+.gradle
+/local.properties
+/.idea
+*.iml
+.DS_Store
+/build
+/javadoc/
+/javadocPublic/
+/adyen-integration/build
+play-account.json
+release.keystore.key

@@ -1,0 +1,34 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+    desc "Deploy a new version to the Google Play beta channel"
+    lane :deploy do
+        gradle(task: "clean assembleRelease")
+        upload_to_play_store(track: 'beta')
+    end
+
+    desc "Deploy to Fabric Release"
+    lane :deploy_release_fabric do |options|
+        gradle(task: "sample:assembleRelease")
+
+    crashlytics(
+        api_token: options[:FABRIC_API_KEY],
+        build_secret: options[:FABRIC_BUILD_SECRET]
+    )
+    end
+end

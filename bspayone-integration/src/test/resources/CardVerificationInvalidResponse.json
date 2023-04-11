@@ -1,0 +1,6 @@
+{
+  "status":"INVALID",
+  "errorcode":"9001",
+  "errormessage":"MockError",
+  "customermessage":"In this mock response Something was, and I quote the API docs, \"INVALID\", so we will remind you that violating the speed of light is not allowed by law of physics"
+}

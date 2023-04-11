@@ -1,0 +1,55 @@
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/LatoTextViewStyle</item>
+        <item name="buttonStyle">@style/LatoButtonStyle</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:statusBarColor">@color/coolGray</item>
+    </style>
+
+
+    <style name="AppTheme.Launcher" parent="@style/AppTheme">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+        <item name="android:statusBarColor">@color/darkAquaMarine</item>
+    </style>
+
+    <style name="TextAppearance.Sample.ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/aquaMarine</item>
+    </style>
+
+    <style name="LatoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="LatoButtonStyle" parent="android:Widget.Button">
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="itemTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/darkBlack</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="itemDescription" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/coolGray</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="itemPrice" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/aquaMarine</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+</resources>

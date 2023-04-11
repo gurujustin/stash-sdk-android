@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/navigation_items">
+
+    <activity
+        android:id="@+id/activity_payment"
+        android:name="com.mobilabsolutions.stash.sample.features.payments.PaymentActivity"
+        android:label="activity_payment"
+        tools:layout="@layout/activity_payment">
+        <argument
+            android:name="pay_amount"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </activity>
+
+    <fragment
+        android:id="@+id/navigation_checkout"
+        android:name="com.mobilabsolutions.stash.sample.features.home.checkout.CheckoutFragment"
+        android:label="@string/checkout"
+        tools:layout="@layout/fragment_checkout" />
+
+    <fragment
+        android:id="@+id/navigation_payment"
+        android:name="com.mobilabsolutions.stash.sample.features.home.paymentmethods.PaymentMethodsFragment"
+        android:label="@string/payment"
+        tools:layout="@layout/fragment_payment_methods" />
+
+    <fragment
+        android:id="@+id/navigation_items"
+        android:name="com.mobilabsolutions.stash.sample.features.home.items.ItemsFragment"
+        android:label="@string/items"
+        tools:layout="@layout/fragment_items" />
+
+    <fragment
+        android:id="@+id/navigation_info"
+        android:name="com.mobilabsolutions.stash.sample.features.home.info.InfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_info" />
+
+</navigation>

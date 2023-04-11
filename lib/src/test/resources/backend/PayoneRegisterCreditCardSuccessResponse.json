@@ -1,0 +1,24 @@
+{
+  "result": {
+    "paymentAlias": "jntyWmRkQKvzMAehbWONWNuhTvVDDqzg",
+    "url": "https://test.soap.bs-card-service.com/soap-api/services/XmlApi",
+    "merchantId": "4556900001",
+    "action": "preauthorization",
+    "panAlias": "mwnvAmVg04JEIVq2qMBJHb5B0DfXKpU6BsSh5NRtWVLmp9bWhy",
+    "username": "vapiaglo",
+    "password": "start1234",
+    "eventExtId": "5bI8rHm4cquUgwh22",
+    "currency": "EUR",
+    "amount": 100,
+    "pspData": {
+      "psp": "payone",
+      "portalId": "3456",
+      "apiVersion": "3.10",
+      "mode": "test",
+      "request": "creditcardcheck",
+      "responseType": "JSON",
+      "hash": "hashashhashash12313213",
+      "accountId": "1234"
+    }
+  }
+}

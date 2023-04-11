@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adyenSepaEntrySwipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="MissingPrefix">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sepaScreenMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_haze"
+            android:orientation="vertical"
+            tools:ignore="MissingPrefix">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="36dp"
+
+                android:padding="4dp"
+                android:rotation="180"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_drop_down" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sepaScreenCellLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_corner_white"
+                android:paddingBottom="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sepaScreenTitle">
+
+                <EditText
+                    android:id="@+id/firstNameEditText"
+                    fontPath="fonts/Lato-Regular.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_selector"
+                    android:ems="10"
+                    android:hint="@string/sepa_data_entry_first_name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:nextFocusDown="@+id/lastNameEditText"
+                    android:paddingStart="16dp"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="@+id/firstNameTitleTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/firstNameTitleTextView">
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/ibanNumberEditText"
+                    fontPath="fonts/Lato-Regular.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_selector"
+                    android:ems="10"
+                    android:hint="@string/sepa_data_entry_iban"
+                    android:inputType="textNoSuggestions|textCapCharacters"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ibanTitleTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/ibanTitleTextView" />
+
+                <TextView
+                    android:id="@+id/errorIban"
+                    fontPath="fonts/Lato-Medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/sepa_data_entry_invalid_iban"
+                    android:textColor="@color/coral"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/ibanNumberEditText"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/countryText"
+                    fontPath="fonts/Lato-Regular.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_selector"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/sepa_data_entry_country"
+                    android:paddingStart="16dp"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:textColor="?attr/editTextColor"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/ibanTitleTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/countryTitleTextView" />
+
+                <EditText
+                    android:id="@+id/lastNameEditText"
+                    fontPath="fonts/Lato-Regular.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_selector"
+                    android:ems="10"
+                    android:hint="@string/sepa_data_entry_last_name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:nextFocusDown="@+id/ibanNumberEditText"
+                    android:paddingStart="16dp"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lastNameTitleTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/lastNameTitleTextView" />
+
+                <TextView
+                    android:id="@+id/ibanTitleTextView"
+                    fontPath="fonts/Lato-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/sepa_data_entry_iban"
+                    android:textColor="@color/gable_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/errorSepaFirstName" />
+
+                <TextView
+                    android:id="@+id/countryTitleTextView"
+                    fontPath="fonts/Lato-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/sepa_data_entry_country"
+                    android:textColor="@color/gable_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/errorIban" />
+
+                <TextView
+                    android:id="@+id/firstNameTitleTextView"
+                    fontPath="fonts/Lato-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/sepa_data_entry_first_name"
+                    android:textColor="@color/gable_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lastNameTitleTextView"
+                    fontPath="fonts/Lato-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/sepa_data_entry_last_name"
+                    android:textColor="@color/gable_green"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/errorSepaFirstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/validation_error_empty"
+                    android:textColor="@color/coral"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/firstNameEditText"
+                    app:layout_constraintTop_toBottomOf="@+id/firstNameEditText"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/errorSepaLastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/validation_error_empty"
+                    android:textColor="@color/coral"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/lastNameEditText"
+                    app:layout_constraintTop_toBottomOf="@+id/lastNameEditText"
+                    tools:visibility="visible" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/rounded_corner_button_selector"
+                android:enabled="false"
+                android:text="@string/sepa_data_entry_save"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sepaScreenCellLayout"
+                app:layout_constraintVertical_bias="0.949" />
+
+
+            <TextView
+                android:id="@+id/sepaScreenTitle"
+                fontPath="fonts/Ubuntu-Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="80dp"
+                android:text="@string/sepa_data_entry_title"
+                android:textColor="@color/gable_green"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

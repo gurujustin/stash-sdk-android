@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!--
+  ~ Copyright © MobiLab Solutions GmbH
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobilabsolutions.stash.core">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application android:allowBackup="false">
+
+        <activity
+            android:name="com.mobilabsolutions.stash.core.internal.uicomponents.RegistrationProcessHostActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.mobilabsolutions.stash.core.internal.uicomponents.CountryChooserActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

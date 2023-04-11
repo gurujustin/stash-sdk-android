@@ -1,0 +1,50 @@
+language: android
+jdk:
+  - oraclejdk8
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - "$HOME/.gradle/caches/"
+    - "$HOME/.gradle/wrapper/"
+    - "$HOME/.android/build-cache"
+android:
+  components:
+    - platform-tools
+    - tools
+    - build-tools-29.0.2
+    - extra-android-support
+    - extra-google-google_play_services
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - extra-android-support
+    - android-28
+  licenses:
+    - android-sdk-license-.+
+env:
+  global:
+    - GRADLE_OPTS="-Xmx4g"
+branches:
+  only:
+    - master
+    - /^(\d+\.)?(\d+\.)?\d+(-\w+)?$/
+
+before_install:
+  - touch /home/travis/.android/repositories.cfg
+  - yes | sdkmanager "platforms;android-28"
+  - mkdir "$ANDROID_HOME/licenses" || true
+  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
+  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
+  - chmod +x gradlew
+  - chmod +x .buildscript.sh
+
+install: ./gradlew spotlessCheck
+
+script: ./gradlew check
+
+after_success: ./.buildscript.sh
+
+notifications:
+  slack:
+    secure: pAlu0Ttaiir36uYyNcE/Y5TR0jMa+Cbiq7ySItZG8xFjK8RTv5deeILIpsTzAMgBmAKdVruRm7p+P3RP/g5A9x/0VPRcAMe0iBPTo4EyCGWCKhOkicljL2yyYhhwLwZ7qCVuht+zWtc/ZHAHmm95f1rglF8nc/EsmUuYKZVTQ9CJnPBkjO4ZczY1rzvltwL9iIy6BXTN2qZeyNHk0ozr4iTn4BT7UQIR4tussAGJdpxItxkR5rC8mzJ5nOJ7tlvwKvgS990OmiCc2DS5QR2nrieBW04JYvxchXKSpYRmE+d4emvDAUiau5GKeHaAUh/MRkZLUR6isfqSKS76/79sW2Ca5Foq/Ec7yyThUV0d1kq9ErDA5WAvhSyNGOHVuPywAi+jem5wT16MFt8+imYVWM3biNr7Ymbq/IyhhACCc5ZZNsKbxan+NONFh6BFL97e/HbNiktu8Gu39260VcplvoSprFtkyVyqlPxq4vSASDCKdUgsVt0+o+w/7Ekkc8fqp5BZ+eTd6AHpzDAAUt5U3L/4v4jdoJo3gPrOcADZ/qmF80bzoA/4F0hINXCO84x5oCRZhkpeisJ777tdwN+2h+9ji8XS84GtVM0ZtK9qxhYU/qoPIY6I6JZw2VvV5NNPAIN9jPrGHXNu45mbVeJYdqwJD0NXd12k8WUQIYPpFXc=
